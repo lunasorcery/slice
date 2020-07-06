@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdint.h>
 #include <stdbool.h> /* how is this not a language feature? !*/
 #include <stdlib.h>
 #include <getopt.h>
