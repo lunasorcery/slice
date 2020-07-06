@@ -31,7 +31,7 @@ On any *nix system it _should_ be as simple as:
 ```
 git clone https://github.com/lunasorcery/slice.git
 cd slice
-make slice
+make slice && make install
 ```
 
 This depends on a recent (C++11) C++ compiler being available. If you encounter issues, please let me know.
