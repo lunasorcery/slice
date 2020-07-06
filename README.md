@@ -26,7 +26,7 @@ Opens `input`, seeks to `start`, reads `length` bytes, and writes them to `outpu
 
 ## Building
 
-On any *nix system it _should_ be as simple as:
+On any \*nix system it _should_ be as simple as:
 
 ```
 git clone https://github.com/lunasorcery/slice.git
@@ -34,4 +34,4 @@ cd slice
 make slice && make install
 ```
 
-This depends on a recent (C++11) C++ compiler being available. If you encounter issues, please let me know.
+This depends on a C compiler being available. If you encounter issues, please let me know.

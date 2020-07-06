@@ -1,18 +1,19 @@
-#include <cstdio>
-#include <cstdlib>
+#include <stdio.h>
+#include <stdbool.h> /* how is this not a language feature? !*/
+#include <stdlib.h>
 #include <getopt.h>
 
 #define eprintf(...) fprintf(stderr, __VA_ARGS__)
 
-// save ourselves an include
+/* save ourselves an include */
 int64_t min(int64_t a, int64_t b) { return a < b ? a : b; }
 
 int main(int argc, char** argv)
 {
 	int const BUFFER_SIZE = 1024*1024;
 
-	char const* pathIn = nullptr;
-	char const* pathOut = nullptr;
+	char const* pathIn = NULL;
+	char const* pathOut = NULL;
 	int64_t start = 0;
 	int64_t length = 0;
 	bool readToEnd = true;
@@ -44,7 +45,7 @@ int main(int argc, char** argv)
 				break;
 			}
 			case 's': {
-				start = strtol(optarg, nullptr, 10);
+				start = strtol(optarg, NULL, 10);
 				if (start < 0) {
 					eprintf("Start offset must be greater than or equal to zero.\n");
 					return 1;
@@ -52,7 +53,7 @@ int main(int argc, char** argv)
 				break;
 			}
 			case 'n': {
-				length = strtol(optarg, nullptr, 10);
+				length = strtol(optarg, NULL, 10);
 				if (length <= 0) {
 					eprintf("Length must be greater than zero.\n");
 					return 1;
