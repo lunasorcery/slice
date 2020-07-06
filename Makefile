@@ -5,7 +5,7 @@ CC ?= clang
 all: slice
 
 slice: main.c
-	$(CC) main.c -std=c89 -o slice -Wall -Wextra -O3
+	$(CC) main.c -std=c99 -o slice -Wall -Wextra -O3
 
 install: slice
 	cp slice /usr/local/bin/slice
